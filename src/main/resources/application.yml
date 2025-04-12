@@ -1,0 +1,32 @@
+# Spring 配置
+spring:
+    # 环境 dev | test | prod
+    profiles:
+        active: dev
+    # 文件上传设置
+    servlet:
+        multipart:
+            # 上传单个文件最大大小，-1 表示不限制
+            max-file-size: 100MB
+            # 上传一组文件最大大小，-1 表示不限制
+            max-request-size: 100MB
+            # 是否延迟解析
+            resolve-lazily: true
+    # 时间序列化
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+
+# Mybatis-Plus 配置
+mybatis-plus:
+    type-aliases-package: com.arthur.domain
+    mapper-locations: classpath*:/mapper/**/*.xml
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    global-config:
+        banner: off
+        db-config:
+            id-type: auto
+            logic-delete-field: del_flag
+            logic-delete-value: 1
+            logic-not-delete-value: 0
