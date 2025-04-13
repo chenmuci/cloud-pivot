@@ -4,8 +4,8 @@ import com.alibaba.fastjson2.JSON;
 import com.arthur.common.annotation.Log;
 import com.arthur.common.utils.IpUtil;
 import com.arthur.common.utils.ServletUtil;
-import com.arthur.domain.SysOperateLog;
-import com.arthur.service.SysOperateLogService;
+import com.arthur.system.domain.SysOperateLog;
+import com.arthur.system.service.SysOperateLogService;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;
@@ -70,7 +70,7 @@ public class LogAspect {
             operateLog.setError(StringUtils.substring(e.getMessage(), 0, 2000));
         }
         operateLog.setStatus(1);
-        operateLog.setCreatedTime(new Date());
+        operateLog.setCreateTime(new Date());
         operateLog.setCostTime(System.currentTimeMillis() - TIME_THREADLOCAL.get());
 
         service.save(operateLog);

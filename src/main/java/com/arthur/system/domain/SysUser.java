@@ -1,4 +1,4 @@
-package com.arthur.domain;
+package com.arthur.system.domain;
 
 import com.arthur.common.annotation.Desensitization;
 import com.arthur.common.core.BaseDomain;

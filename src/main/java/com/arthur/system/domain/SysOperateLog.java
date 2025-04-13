@@ -1,4 +1,4 @@
-package com.arthur.domain;
+package com.arthur.system.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -55,7 +55,7 @@ public class SysOperateLog {
 
     @Schema(description = "操作时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private Date createdTime;
+    private Date createTime;
 
     @Schema(description = "消耗时间")
     private Long costTime;

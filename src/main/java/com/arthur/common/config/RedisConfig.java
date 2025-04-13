@@ -28,7 +28,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Redis 缓存配置
+ * Redis 缓存配置类
  * @author Arthur
  */
 @EnableCaching

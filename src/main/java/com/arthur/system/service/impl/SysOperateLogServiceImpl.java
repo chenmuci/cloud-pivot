@@ -1,8 +1,8 @@
-package com.arthur.service.impl;
+package com.arthur.system.service.impl;
 
-import com.arthur.domain.SysOperateLog;
-import com.arthur.mapper.SysOperateLogMapper;
-import com.arthur.service.SysOperateLogService;
+import com.arthur.system.domain.SysOperateLog;
+import com.arthur.system.mapper.SysOperateLogMapper;
+import com.arthur.system.service.SysOperateLogService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

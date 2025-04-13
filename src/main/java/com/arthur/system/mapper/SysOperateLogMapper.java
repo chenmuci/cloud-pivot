@@ -1,6 +1,6 @@
-package com.arthur.mapper;
+package com.arthur.system.mapper;
 
-import com.arthur.domain.SysOperateLog;
+import com.arthur.system.domain.SysOperateLog;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

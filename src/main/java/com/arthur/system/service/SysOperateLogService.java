@@ -1,6 +1,6 @@
-package com.arthur.service;
+package com.arthur.system.service;
 
-import com.arthur.domain.SysOperateLog;
+import com.arthur.system.domain.SysOperateLog;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

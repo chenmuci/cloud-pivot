@@ -16,8 +16,17 @@ import org.springframework.context.annotation.Configuration;
 public class SwaggerConfig {
 
     @Bean
-    public GroupedOpenApi createRestApi() {
-        return GroupedOpenApi.builder().group("接口文档").packagesToScan("com.arthur").build();
+    public GroupedOpenApi testApi() {
+        return createRestApi("default", "com.arthur.test");
+    }
+
+    @Bean
+    public GroupedOpenApi systemApi() {
+        return createRestApi("系统管理", "com.arthur.system");
+    }
+
+    public GroupedOpenApi createRestApi(String groupName, String packagesToScan) {
+        return GroupedOpenApi.builder().group(groupName).packagesToScan(packagesToScan).build();
     }
 
     @Bean
